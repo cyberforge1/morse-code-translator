@@ -1,3 +1,6 @@
+import { searchForMatchingKey } from './translation-logic.js'
+import { dictionaryObj } from './dictionary.js'
+
 
 const translateButton = document.querySelector('#translateButton')
 
@@ -40,15 +43,33 @@ clearButton.addEventListener('click', () => {
 const leftInput = document.querySelector('#leftInput')
 const rightInput = document.querySelector('#rightInput')
 
+
+
+
+// ENGLISH TO MORSE CODE
 leftInput.addEventListener('input', () => {
-    const leftInputValue = leftInput.value
+    let leftInputValue = leftInput.value
+    let currentLeftInputChar = leftInputValue[leftInputValue.length - 1]
     rightInput.setAttribute('readonly', true);
-    console.log('This is the left input', leftInputValue)
+    // console.log('This is the left input', currentLeftInputChar.toUpperCase())
+    // console.log('The translated left input is', searchForMatchingKey(currentLeftInputChar.toUpperCase()))
+    let currentMorseChar = searchForMatchingKey(currentLeftInputChar.toUpperCase())
+    //rightInput.innerText = currentMorseChar
+
     if (leftInputValue === '') {
         rightInput.removeAttribute('readonly');
     }
 })
 
+
+
+
+
+
+
+
+
+// MORSE CODE TO ENGLISH
 
 rightInput.addEventListener('input', () => {
     const rightInputValue = rightInput.value
