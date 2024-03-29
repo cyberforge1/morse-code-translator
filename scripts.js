@@ -4,16 +4,38 @@ const translateButton = document.querySelector('#translateButton')
 const clearButton = document.querySelector('#clearButton')
 
 translateButton.addEventListener('click', () => {
+    toggleDirection()
     console.log('Translate button has been clicked!')
+    clearReadOnly()
 })
+
+
+
+const clearInputs = () => {
+    leftInput.value = ''
+    rightInput.value = ''
+}
+
+const clearReadOnly = () => {
+    rightInput.removeAttribute('readonly');
+    leftInput.removeAttribute('readonly');
+}
+
+const currentDirection = document.querySelector('#currentDirection')
+
+const toggleDirection = () => {
+    if (currentDirection.innerText === 'Direction: English to Morse Code') {
+        currentDirection.innerText = 'Direction: Morse Code to English'
+    } else {
+        currentDirection.innerText = 'Direction: English to Morse Code'
+    }
+}
 
 clearButton.addEventListener('click', () => {
-    console.log('Clear button has been clicked!')
+    clearInputs()
+    clearReadOnly()
 })
 
-const changeTranslationDirection = () => {
-
-}
 
 const leftInput = document.querySelector('#leftInput')
 const rightInput = document.querySelector('#rightInput')
