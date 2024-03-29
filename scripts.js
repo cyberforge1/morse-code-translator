@@ -29,12 +29,15 @@ const translatorObj =
     "Z": "--.."
  }
 
+
+
+ // ENGLISH TO MORSE CODE
+
  // ADD MORSE CODE NUMBERS
 
+const englishInputStr = 'some input text'
 
-const inputStr = 'some input text'
-
-const inputArr = inputStr.toUpperCase().split('')
+const englishInputArr = englishInputStr.toUpperCase().split('')
 
 //console.log(inputArr)
 
@@ -73,7 +76,7 @@ const searchForMatchingKey = (char) => {
 //     console.log(searchForMatchingKey(char))
 // });
 
-const iterateOverInputStr = inputArr.map((char) => searchForMatchingKey(char)).join('');
+const iterateOverInputStr = englishInputArr.map((char) => searchForMatchingKey(char)).join('');
 
 console.log(iterateOverInputStr)
 
@@ -81,3 +84,4 @@ console.log(iterateOverInputStr)
 // iterateOverInputStr function (return single char) -> searchForMatchingKey function (return corresponding value) 
 
 
+ // MORSE CODE TO ENGLISH
