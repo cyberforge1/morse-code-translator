@@ -49,8 +49,8 @@ main {
 }
 
 .translator-container {
-    height: 200px;
     width: 450px;
+    height: 200px;
     border: 1px solid darkgrey;
     border-radius: 15px;
     display: flex;
@@ -83,12 +83,16 @@ main {
     height: 80%;
     width: 90%;
     border: 1px solid yellow;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #rightInput {
     height: 80%;
     width: 90%;
     border: 1px solid orange;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 input {
