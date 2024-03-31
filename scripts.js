@@ -55,10 +55,42 @@ leftInput.addEventListener('keydown', (event) => {
         console.log("Space key pressed");
         currentWord = '';
     } else if (event.key === "Backspace") {
+
         console.log("Backspace key pressed");
         currentWord = currentWord.slice(0, -1);
-        console.log(currentWord)
+        //let lastChar = currentWord[currentWord.length - 1]
+        // let lastMorseChar = searchForMatchingKey(lastChar)
+        // console.log('This is the last morse char', lastMorseChar)
+        
+        console.log('This is the current word', currentWord);
         console.log('This is the current word length', currentWord.length);
+
+ 
+        let currentValue = rightInput.value;
+
+
+        let currentValueArray = currentValue.split(' ');
+        console.log('This is the current Array', currentValueArray)
+        currentValueArray.pop();
+        console.log('This is the current Array with last element removed', currentValueArray)
+        
+
+        currentValue = currentValueArray.join(' ');
+        
+
+        rightInput.value = currentValue;
+
+
+
+        // let rightInputArr = rightInput.value.split(' ')
+        // console.log('This is the right input array before pop', rightInputArr)
+        // let poppedElement = rightInputArr.pop()
+        // console.log('This is the popped Element', poppedElement)
+        // console.log('This is the right input array after pop', rightInputArr)
+
+        // }
+
+        // rightInput.value -= currentMorseChar
     } else {
         let leftInput = event.key.toUpperCase();
         console.log("Key pressed: " + leftInput);
@@ -66,6 +98,14 @@ leftInput.addEventListener('keydown', (event) => {
         currentWord += leftInput;
         console.log('This is the current word', currentWord);
         console.log('This is the current word length', currentWord.length);
+
+        let currentMorseChar = searchForMatchingKey(leftInput)
+        console.log('This is the current morse char:', currentMorseChar)
+
+        rightInput.value += currentMorseChar
+        console.log(rightInput.value)
+
+
     }
 });
 
@@ -121,11 +161,11 @@ leftInput.addEventListener('keydown', (event) => {
 
 // MORSE CODE TO ENGLISH
 
-rightInput.addEventListener('input', () => {
-    const rightInputValue = rightInput.value
-    leftInput.setAttribute('readonly', true);
-    console.log('This is the right input', rightInputValue)
-    if (rightInputValue === '') {
-        leftInput.removeAttribute('readonly');
-    }
-})
+// rightInput.addEventListener('input', () => {
+//     const rightInputValue = rightInput.value
+//     leftInput.setAttribute('readonly', true);
+//     console.log('This is the right input', rightInputValue)
+//     if (rightInputValue === '') {
+//         leftInput.removeAttribute('readonly');
+//     }
+// })

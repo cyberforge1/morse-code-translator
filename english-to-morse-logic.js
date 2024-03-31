@@ -17,6 +17,5 @@ export const searchForMatchingKey = (char) => {
             currentValue += `${value} `
         }
     })
-    console.log(currentValue)
     return currentValue
 }
