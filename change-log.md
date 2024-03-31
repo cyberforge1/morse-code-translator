@@ -7,3 +7,7 @@
 - display this text in the left inputBox
 
 - connect button for changing the translation logic 
+
+- build in unrecognized char symbol?
+
+- add numbers to dictionary 
