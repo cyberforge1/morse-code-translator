@@ -1,6 +1,4 @@
-
 // MORSE CODE TO ENGLISH
-
 
 
 const dictionaryObj = 

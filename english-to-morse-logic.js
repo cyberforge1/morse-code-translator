@@ -1,6 +1,8 @@
 import { dictionaryObj } from './dictionary.js'
 
 
+// ENGLISH TO MORSE
+
 export const searchForMatchingKey = (char) => {
 
     let currentValue = ''
