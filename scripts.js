@@ -6,18 +6,23 @@ const translateButton = document.querySelector('#translateButton')
 
 const clearButton = document.querySelector('#clearButton')
 
-translateButton.addEventListener('click', () => {
-    toggleDirection()
-    console.log('Translate button has been clicked!')
-    clearReadOnly()
-})
+
+
+// const toggleDirection = () => {
+//     if (currentDirection.innerText === 'Direction: English to Morse Code') {
+//         currentDirection.innerText = 'Direction: Morse Code to English'
+//     } else {
+//         currentDirection.innerText = 'Direction: English to Morse Code'
+//     }
+// }
+
+
 
 
 
 const clearInputs = () => {
     leftInput.value = ''
     rightInput.value = ''
-    rightInputInnerText = ''
 }
 
 const clearReadOnly = () => {
@@ -25,19 +30,24 @@ const clearReadOnly = () => {
     leftInput.removeAttribute('readonly');
 }
 
+
+
+
+
+
 const currentDirection = document.querySelector('#currentDirection')
 
-const toggleDirection = () => {
-    if (currentDirection.innerText === 'Direction: English to Morse Code') {
-        currentDirection.innerText = 'Direction: Morse Code to English'
-    } else {
-        currentDirection.innerText = 'Direction: English to Morse Code'
-    }
-}
+
+
+
+
+
+
+
+
 
 clearButton.addEventListener('click', () => {
     clearInputs()
-    clearReadOnly()
 })
 
 
@@ -46,33 +56,59 @@ clearButton.addEventListener('click', () => {
 const leftInput = document.querySelector('#leftInput')
 const rightInput = document.querySelector('#rightInput')
 
-let rightInputInnerText = rightInput.innerText
+rightInput.disabled = true
+//leftInput.disabled = true
+
+const toggleDirection = () => {
+    if (rightInput.disabled === true) {
+        console.log('The right input is disabled');
+        rightInput.disabled = false;
+        leftInput.disabled = true;
+        currentDirection.innerText = 'Direction: Morse Code to English'
+    } else if (leftInput.disabled === true) {
+        console.log('The left input is disabled');
+        leftInput.disabled = false;
+        rightInput.disabled = true;
+        currentDirection.innerText = 'Direction: English to Morse Code'
+    }
+}
+
+translateButton.addEventListener('click', () => {
+    toggleDirection()
+    console.log('Translate button has been clicked!')
+})
+
+
+
+
 
 let currentWord = ''
-// ENGLISH TO MORSE CODE
+
+
+if (rightInput.disabled = true) {
+    // ENGLISH TO MORSE CODE
 leftInput.addEventListener('keydown', (event) => {
     if (event.key === " ") {
-        console.log("Space key pressed");
+        //console.log("Space key pressed");
         currentWord = '';
     } else if (event.key === "Backspace") {
 
-        console.log("Backspace key pressed");
+        //console.log("Backspace key pressed");
         currentWord = currentWord.slice(0, -1);
         //let lastChar = currentWord[currentWord.length - 1]
         // let lastMorseChar = searchForMatchingKey(lastChar)
         // console.log('This is the last morse char', lastMorseChar)
         
-        console.log('This is the current word', currentWord);
-        console.log('This is the current word length', currentWord.length);
+        // console.log('This is the current word', currentWord);
+        // console.log('This is the current word length', currentWord.length);
 
  
         let currentValue = rightInput.value;
 
 
         let currentValueArray = currentValue.split(' ');
-        console.log('This is the current Array', currentValueArray)
         currentValueArray.pop();
-        console.log('This is the current Array with last element removed', currentValueArray)
+        //console.log('This is the current Array with last element removed', currentValueArray)
         
 
         currentValue = currentValueArray.join(' ');
@@ -93,22 +129,25 @@ leftInput.addEventListener('keydown', (event) => {
         // rightInput.value -= currentMorseChar
     } else {
         let leftInput = event.key.toUpperCase();
-        console.log("Key pressed: " + leftInput);
+        //console.log("Key pressed: " + leftInput);
         rightInput.setAttribute('readonly', true);
         currentWord += leftInput;
-        console.log('This is the current word', currentWord);
-        console.log('This is the current word length', currentWord.length);
+        //console.log('This is the current word', currentWord);
+        //console.log('This is the current word length', currentWord.length);
 
         let currentMorseChar = searchForMatchingKey(leftInput)
-        console.log('This is the current morse char:', currentMorseChar)
+        //console.log('This is the current morse char:', currentMorseChar)
 
         rightInput.value += currentMorseChar
-        console.log(rightInput.value)
+        //console.log(rightInput.value)
 
 
     }
 });
 
+
+
+}
 
 
 
