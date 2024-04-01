@@ -19,3 +19,4 @@
 
 - fix the backspace logic (one step behind)
 - clear both inputs when either is empty 
+- change css to scss
