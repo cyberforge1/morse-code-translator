@@ -1,7 +1,7 @@
 import { englishKeyDict } from '../dictionaries/english-key-dict.mjs'
 
 
-// ENGLISH TO MORSE
+// ENGLISH TO MORSE CODE
 
 export const englishToMorseCode = (char) => {
 

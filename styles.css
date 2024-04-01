@@ -1,148 +1,118 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body, html {
-    margin: 0;
-    padding: 0;
-    /* background-image: linear-gradient(rgba(0,0,0,0.6), rgb(31,36,40)); */
-    background-color: rgb(31,36,40);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(31, 36, 40);
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(225,228,232);
+  font-family: "Roboto", sans-serif;
+  color: rgb(225, 228, 232);
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #D4D5F2;
 }
 
 #mainContainer {
-    width: 100%;
-    height: 65%;
+  width: 100%;
+  height: 65%;
 }
 
 #title {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 
 #description {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: blue;
 }
 
 #translation {
-    height: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #footer {
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-style: italic;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .translator-container {
-    width: 450px;
-    height: 200px;
-    border: 1px solid darkgrey;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 450px;
+  height: 200px;
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #buttonContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 200px;
+}
+
+#translateButton, #clearButton {
+  height: 40px;
+  width: 80px;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  color: white;
 }
 
 #translateButton {
-    height: 40px;
-    width: 80px;
-    border: 1px solid darkgrey;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
+  background-color: green;
 }
 
 #clearButton {
-    height: 40px;
-    width: 80px;
-    border: 1px solid darkgrey;
-    border-radius: 5px;
-    background-color: red;
-    color: white;
+  background-color: red;
 }
 
-#leftInput {
-    height: 80%;
-    width: 90%;
-    max-width: 100%;
-    max-height: 100%;
-    color: rgb(225,228,232);
-    background-color: rgb(36,41,46);
-    font-size: 20px;
-}
-
-#rightInput {
-    height: 80%;
-    width: 90%;
-    max-width: 100%;
-    max-height: 100%;
-    color: rgb(225,228,232);
-    background-color: rgb(36,41,46);
-    font-size: 20px;
+#leftInput, #rightInput {
+  height: 80%;
+  width: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  color: rgb(225, 228, 232);
+  background-color: rgb(36, 41, 46);
+  font-size: 20px;
 }
 
 input {
-    vertical-align: top;
-    text-align: left;
+  vertical-align: top;
+  text-align: left;
 }
 
 #widthAdjust {
-    width: 1200px;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
-/* PHONE MEDIA QUERY */
-/* @media screen and (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-    #widthAdjust {
-        width: 100%;
-    }
-  } */
-  
-  /* TABLET MEDIA QUERY */
-  /* @media screen and (min-width: 769px) and (max-width: 991px) {
-    body {
-      font-size: 16px;
-    }
-    #widthAdjust {
-        width: 100%;
-    }
-  } */
+/*# sourceMappingURL=styles.css.map */
