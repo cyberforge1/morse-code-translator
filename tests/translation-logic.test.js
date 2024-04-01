@@ -1,7 +1,5 @@
 import { englishToMorseCode } from '../logic/english-to-morse-logic.mjs';
 
-
-
 // ENGLISH TO MORSE CODE TESTS
 
 describe('englishToMorseCode', () => {
