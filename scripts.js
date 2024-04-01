@@ -32,12 +32,12 @@ const rightInput = document.querySelector('#rightInput')
 
 const toggleDirection = () => {
     if (rightInput.disabled === true) {
-        console.log('The right input is disabled');
+        // console.log('The right input is disabled');
         rightInput.disabled = false;
         leftInput.disabled = true;
         currentDirection.innerText = 'Direction: Morse Code to English'
     } else if (leftInput.disabled === true) {
-        console.log('The left input is disabled');
+        // console.log('The left input is disabled');
         leftInput.disabled = false;
         rightInput.disabled = true;
         currentDirection.innerText = 'Direction: English to Morse Code'
@@ -46,7 +46,7 @@ const toggleDirection = () => {
 
 translateButton.addEventListener('click', () => {
     toggleDirection()
-    console.log('Translate button has been clicked!')
+    // console.log('Translate button has been clicked!')
 })
 
 
@@ -86,7 +86,6 @@ leftInput.addEventListener('keydown', (event) => {
     } else {
         let leftInput = event.key.toUpperCase();
         //console.log("Key pressed: " + leftInput);
-        rightInput.setAttribute('readonly', true);
         currentEnglishWord += leftInput;
         //console.log('This is the current word', currentWord);
 
@@ -124,8 +123,8 @@ rightInput.addEventListener('keydown', (event) => {
 
 
     } else if (event.key === "Backspace") {
-        console.log("Backspace key pressed");
-        console.log(morseCodeToEnglish(event.key))
+        //console.log("Backspace key pressed");
+        //console.log(morseCodeToEnglish(event.key))
 
         leftInput.value = leftInput.value.slice(0, -1);
 
@@ -148,18 +147,18 @@ rightInput.addEventListener('keydown', (event) => {
 
 
     } else if (event.key === "/") {
-        console.log('Slash key pressed')
+        //console.log('Slash key pressed')
         //console.log('The morse code word has finished')
         // morseCodeLetter += '/'
         // console.log('This is the current morse code letter after a / addition', morseCodeLetter)
         //console.log(morseCodeToEnglish(event.key))
         currentMorseLetter = ''
-        leftInput.value += ' '
+        leftInput.value += '/'
 
 
 
     } else if (event.key === "." || event.key === "-") {
-        console.log('A dot or a hyphen char pressed')
+        //console.log('A dot or a hyphen char pressed')
         //console.log('This is the current morse char', event.key)
 
         // console.log('This is the current English char', morseCodeToEnglish(event.key))

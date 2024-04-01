@@ -1,25 +1,19 @@
 # TO DO 
 
+- write unit tests
+- minor styling
+- change css to scss
 
-- build in morse code to english function
-    -export function
-    -fix dom utils
+
+
+- addition of responsive design
 
 - clean up logic functions
 
-- write unit tests
-
+- create colorful changing direction text and placeholder text that toggles on switch button click
 
 - add numbers to dictionary 
 - add symbols to dictionary
-- build in unrecognized char symbol?
- 
-
-- minor styling
-
-- fix the backspace logic (one step behind)
-- clear both inputs when either is empty 
-- change css to scss
 
 - clear all of the letter and word accumulation strings on clear button click
 
