@@ -1,5 +1,5 @@
-import { searchForMatchingKey } from './english-to-morse-logic.js'
-import { dictionaryObj } from './dictionary.js'
+import { englishToMorseCode } from './english-to-morse-logic.js'
+import { english-key-dict.mjs } from './dictionary.js'
 
 
 const translateButton = document.querySelector('#translateButton')
@@ -65,7 +65,7 @@ leftInput.addEventListener('input', () => {
 
 
     // console.log('This is the left input', currentLeftInputChar.toUpperCase())
-    // console.log('The translated left input is', searchForMatchingKey(currentLeftInputChar.toUpperCase()))
+    // console.log('The translated left input is', englishToMorseCode(currentLeftInputChar.toUpperCase()))
 
     // let totalLength = 
     // let currentLength = 
@@ -75,7 +75,7 @@ leftInput.addEventListener('input', () => {
     if(currentLeftInputChar) {
 
 
-        let currentMorseChar = searchForMatchingKey(currentLeftInputChar.toUpperCase())
+        let currentMorseChar = englishToMorseCode(currentLeftInputChar.toUpperCase())
         //console.log('This is the current morse code char', currentMorseChar)
 
 

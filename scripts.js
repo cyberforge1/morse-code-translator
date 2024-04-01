@@ -1,5 +1,8 @@
-import { searchForMatchingKey } from './english-to-morse-logic.js'
-import { dictionaryObj } from './dictionary.js'
+import { englishToMorseCode } from './logic/english-to-morse-logic.mjs'
+import { morseCodeToEnglish } from './logic/morse-to-english-logic.mjs'
+
+import { englishKeyDict } from './dictionaries/english-key-dict.mjs'
+import { morseCodeDict } from './dictionaries/morse-key-dict.mjs'
 
 
 const translateButton = document.querySelector('#translateButton')
@@ -10,6 +13,8 @@ const clearButton = document.querySelector('#clearButton')
 const clearInputs = () => {
     leftInput.value = ''
     rightInput.value = ''
+    currentEnglishWord = ''
+    currentMorseLetter = ''
 }
 
 const currentDirection = document.querySelector('#currentDirection')
@@ -46,14 +51,14 @@ translateButton.addEventListener('click', () => {
 
 
 
-//rightInput.disabled = true
+rightInput.disabled = true
 //leftInput.disabled = true
 
 
-let currentWord = ''
+let currentEnglishWord = ''
 
 
-//CORRECT RIGHT INPUT FUNCTION //
+// ENGLISH TO MORSE FUNCTION
 
 //////////////////////////////////////////////
 
@@ -61,90 +66,33 @@ if (rightInput.disabled === true) {}
 leftInput.addEventListener('keydown', (event) => {
     if (event.key === " ") {
         //console.log("Space key pressed");
-        currentWord = '';
+        currentEnglishWord = '';
     } else if (event.key === "Backspace") {
 
-        console.log("Backspace key pressed");
-        currentWord = currentWord.slice(0, -1);
-        //let lastChar = currentWord[currentWord.length - 1]
-        // let lastMorseChar = searchForMatchingKey(lastChar)
-        // console.log('This is the last morse char', lastMorseChar)
+        //console.log("Backspace key pressed");
+        currentEnglishWord = currentEnglishWord.slice(0, -1);
         
-        console.log('This is the current word', currentWord);
-        // console.log('This is the current word length', currentWord.length);
-        let currentWordArr = currentWord.split('')
-        console.log(currentWordArr)
+        //console.log('This is the current word', currentWord);
+        let currentWordArr = currentEnglishWord.split('')
 
         let currentWordStr = ''
 
         currentWordArr.forEach((letter) => {
-            currentWordStr += searchForMatchingKey(letter)
+            currentWordStr += englishToMorseCode(letter)
         })
-
-        console.log(currentWordStr)
 
         rightInput.value = currentWordStr
 
-
-
-        //rightInput.value = currentWord
-
-        // let currentWordArray = currentWord.split('');
-        // console.log('The current word array is:', currentWordArray)
-
-        // currentWordArray.forEach((letter) => {
-            
-        //     console.log(searchForMatchingKey(letter))
-        // })
-
-
-
-
-        
-        //console.log(searchForMatchingKey(rightInput.value))
-
- 
-        // let currentValue = rightInput.value;
-        // //console.log(currentValue)
-
-
-        // let currentValueArray = currentValue.split(' ');
-
-        // currentValueArray.pop();
-        // //console.log('This is the current Array with last element removed', currentValueArray)
-        
-
-        // currentValue = currentValueArray.join(' ');
-        
-
-        // rightInput.value = currentValue;
-
-
-
-        // let rightInputArr = rightInput.value.split(' ')
-        // console.log('This is the right input array before pop', rightInputArr)
-        // let poppedElement = rightInputArr.pop()
-        // console.log('This is the popped Element', poppedElement)
-        // console.log('This is the right input array after pop', rightInputArr)
-
-        // }
-
-        // rightInput.value -= currentMorseChar
     } else {
         let leftInput = event.key.toUpperCase();
-        console.log("Key pressed: " + leftInput);
+        //console.log("Key pressed: " + leftInput);
         rightInput.setAttribute('readonly', true);
-        currentWord += leftInput;
-        console.log('This is the current word', currentWord);
-        //console.log('This is the current word length', currentWord.length);
+        currentEnglishWord += leftInput;
+        //console.log('This is the current word', currentWord);
 
-        let currentMorseChar = searchForMatchingKey(leftInput)
-        //console.log('This is the current morse char:', currentMorseChar)
+        let currentMorseChar = englishToMorseCode(leftInput)
 
         rightInput.value += currentMorseChar
-        //console.log(rightInput.value)
-
-
     }
 });
 
@@ -154,87 +102,93 @@ leftInput.addEventListener('keydown', (event) => {
 
 
 
-// THIS IS WHERE ITS LEFT
+let currentMorseLetter = ''
+let changedMorseLetter = ''
 
-// if (leftInput.disabled = true) {}
-// leftInput.addEventListener('keydown', (event) => {
+// MORSE TO ENGLISH FUNCTION
 
-//     if (event.key === "/") {
-//         //console.log("Space key pressed");
-//         currentWord = '';
-
+if (leftInput.disabled === true) {}
+rightInput.addEventListener('keydown', (event) => {
 
 
+    if (event.key === " ") {
+        //console.log("Space key pressed");
+        //console.log('The morse code letter has finished')
+
+        leftInput.value += `${changedMorseLetter} `
+        //console.log(leftInput.value)
+
+        currentMorseLetter = ''
+        //console.log('This is the current morse code letter after it is cleared:', currentMorseLetter)
 
 
 
+    } else if (event.key === "Backspace") {
+        console.log("Backspace key pressed");
+        console.log(morseCodeToEnglish(event.key))
 
+        leftInput.value = leftInput.value.slice(0, -1);
 
-
-//     } else if (event.key === "Backspace") {
-
-//         //console.log("Backspace key pressed");
-//         currentWord = currentWord.slice(0, -1);
-//         //let lastChar = currentWord[currentWord.length - 1]
-//         // let lastMorseChar = searchForMatchingKey(lastChar)
-//         // console.log('This is the last morse char', lastMorseChar)
+        // //console.log("Backspace key pressed");
+        // currentEnglishWord = currentEnglishWord.slice(0, -1);
         
-//         // console.log('This is the current word', currentWord);
-//         // console.log('This is the current word length', currentWord.length);
+        // //console.log('This is the current word', currentWord);
+        // let currentWordArr = currentEnglishWord.split('')
 
- 
-//         let currentValue = rightInput.value;
+        // let currentWordStr = ''
 
+        // currentWordArr.forEach((letter) => {
+        //     currentWordStr += englishToMorseCode(letter)
+        // })
 
-//         let currentValueArray = currentValue.split(' ');
-//         currentValueArray.pop();
-//         //console.log('This is the current Array with last element removed', currentValueArray)
-        
-
-//         currentValue = currentValueArray.join(' ');
-        
-
-//         rightInput.value = currentValue;
-
-
-
-//         // let rightInputArr = rightInput.value.split(' ')
-//         // console.log('This is the right input array before pop', rightInputArr)
-//         // let poppedElement = rightInputArr.pop()
-//         // console.log('This is the popped Element', poppedElement)
-//         // console.log('This is the right input array after pop', rightInputArr)
-
-//         // }
-
-//         // rightInput.value -= currentMorseChar
-//     } else {
-//         let leftInput = event.key.toUpperCase();
-//         console.log("Key pressed: " + leftInput);
-//         rightInput.setAttribute('readonly', true);
-//         currentWord += leftInput;
-//         console.log('This is the current word', currentWord);
-//         //console.log('This is the current word length', currentWord.length);
-
-//         let currentMorseChar = searchForMatchingKey(leftInput)
-//         //console.log('This is the current morse char:', currentMorseChar)
-
-//         rightInput.value += currentMorseChar
-//         //console.log(rightInput.value)
-
-
-//     }
-// });
+        // rightInput.value = currentWordStr
 
 
 
 
-// MORSE CODE TO ENGLISH
 
-// rightInput.addEventListener('input', () => {
-//     const rightInputValue = rightInput.value
-//     leftInput.setAttribute('readonly', true);
-//     console.log('This is the right input', rightInputValue)
-//     if (rightInputValue === '') {
-//         leftInput.removeAttribute('readonly');
-//     }
-// })
+    } else if (event.key === "/") {
+        console.log('Slash key pressed')
+        //console.log('The morse code word has finished')
+        // morseCodeLetter += '/'
+        // console.log('This is the current morse code letter after a / addition', morseCodeLetter)
+        //console.log(morseCodeToEnglish(event.key))
+        currentMorseLetter = ''
+        leftInput.value += ' '
+
+
+
+    } else if (event.key === "." || event.key === "-") {
+        console.log('A dot or a hyphen char pressed')
+        //console.log('This is the current morse char', event.key)
+
+        // console.log('This is the current English char', morseCodeToEnglish(event.key))
+
+        currentMorseLetter += event.key
+        //console.log('This is the current morse letter', currentMorseLetter)
+
+        changedMorseLetter = morseCodeToEnglish(currentMorseLetter)
+
+        //console.log('This is the changed morse letter:', changedMorseLetter)
+
+
+        // leftInput.value += `${translatedChar} `
+        // console.log(leftInput.value)
+
+
+
+    } else {
+        //console.log('Any other char was pressed')
+        //console.log(morseCodeToEnglish(event.key))
+        currentMorseLetter = ''
+        leftInput.value += `${morseCodeToEnglish(event.key)}`
+    }
+    // console.log('This is the current morse letter being passed to the function', currentMorseLetter)
+    // console.log('This is the current english letter returned by the function', morseCodeToEnglish(currentMorseLetter))
+    // let currentEnglishLetter = morseCodeToEnglish(currentMorseLetter)
+    // console.log('This is the current English letter', currentEnglishLetter)
+
+});
+
+
+//console.log(morseCodeToEnglish('.-'))

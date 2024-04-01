@@ -13,7 +13,7 @@ const englishInputArr = englishInputStr.toUpperCase().split('')
 
 let finalStr = ''
 
-const searchForMatchingKey = (char) => {
+const englishToMorseCode = (char) => {
     //console.log('one search for matching key function call')
     let currentValue = ''
 
@@ -43,15 +43,15 @@ const searchForMatchingKey = (char) => {
 
 
 // const iterateOverInputStr = inputArr.forEach((char) => {
-//     console.log(searchForMatchingKey(char))
+//     console.log(englishToMorseCode(char))
 // });
 
-const iterateOverInputStr = englishInputArr.map((char) => searchForMatchingKey(char)).join('');
+const iterateOverInputStr = englishInputArr.map((char) => englishToMorseCode(char)).join('');
 
 console.log(iterateOverInputStr)
 
 
-// iterateOverInputStr function (return single char) -> searchForMatchingKey function (return corresponding value) 
+// iterateOverInputStr function (return single char) -> englishToMorseCode function (return corresponding value) 
 
 
  // MORSE CODE TO ENGLISH

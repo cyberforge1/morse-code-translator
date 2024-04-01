@@ -20,3 +20,7 @@
 - fix the backspace logic (one step behind)
 - clear both inputs when either is empty 
 - change css to scss
+
+- clear all of the letter and word accumulation strings on clear button click
+
+- add undefined handling from morse code input (populate with unknown character)

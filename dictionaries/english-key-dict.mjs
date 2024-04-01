@@ -1,4 +1,4 @@
-export const dictionaryObj = 
+export const englishKeyDict = 
 {
     "A": ".-",
     "B": "-...",

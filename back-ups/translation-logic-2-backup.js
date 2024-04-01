@@ -1,7 +1,9 @@
+
 // MORSE CODE TO ENGLISH
 
 
-const dictionaryObj = 
+
+const english-key-dict.mjs = 
 {
     "A": ".-",
     "B": "-...",
@@ -35,7 +37,7 @@ const morseCodeDict = {}
 
 // Create a new object from the original dictionary with keys and values exchanged
 
-Object.entries(dictionaryObj).forEach(([key, val]) => {
+Object.entries(english-key-dict.mjs).forEach(([key, val]) => {
     return morseCodeDict[val] = key
 })
 
