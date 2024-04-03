@@ -17,6 +17,11 @@ In this project, I will create a morse-code translator where the user will be ab
 - ADDITIONS AND IMPROVEMENTS
 
 
+## SCREENSHOT
+
+![Screenshot](images/screenshot.png)
+
+
 ## GOALS
 
 - To iterate through JS Object data types by using methods such as Object.keys(), Object.values() and Object.entries
