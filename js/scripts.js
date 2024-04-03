@@ -1,4 +1,4 @@
-import { englishToMorseCode, morseCodeToEnglish } from './translation-logic.js';
+import { englishToMorseCode, morseCodeToEnglish } from './translation.js';
 
 import { englishKeyDict, morseCodeDict } from './dictionaries.js'
 
@@ -80,7 +80,7 @@ leftInput.addEventListener('keydown', (event) => {
 
         let currentMorseChar = englishToMorseCode(leftInput)
 
-        rightInput.value += currentMorseChar
+        rightInput.value += `${currentMorseChar} `
     }
 });
 
