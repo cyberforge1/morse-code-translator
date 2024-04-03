@@ -1,4 +1,4 @@
-import { englishToMorseCode } from '../logic/english-to-morse-logic.mjs';
+import { englishToMorseCode, morseCodeToEnglish } from './translation-logic.js';
 
 // ENGLISH TO MORSE CODE TESTS
 
