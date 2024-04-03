@@ -1,7 +1,19 @@
-import { morseCodeDict } from "../dictionaries/morse-key-dict.mjs"
+import { englishKeyDict, morseCodeDict } from './dictionaries.js'
+
+
+// ENGLISH TO MORSE CODE
+export const englishToMorseCode = (char) => {
+    if (char === ' ') {
+        return '/ ';
+    }
+    if (char in englishKeyDict) {
+        return `${englishKeyDict[char]} `;
+    }
+    return '';
+}
+
 
 // MORSE CODE TO ENGLISH
-
 export const morseCodeToEnglish = (symbol) => {
 
     let englishValue = ''
@@ -20,7 +32,4 @@ export const morseCodeToEnglish = (symbol) => {
     }
     return englishValue
 }
-
-
-
 

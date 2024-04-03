@@ -26,3 +26,14 @@ export const englishKeyDict =
     "Y": "-.--",
     "Z": "--.."
  }
+
+
+const switchEnglishToMorseDict = (englishKeyDict) => {
+    return Object.entries(englishKeyDict).reduce((acc, [key, val]) => {
+        acc[val] = key;
+        return acc;
+    }, {});
+}
+
+
+export const morseCodeDict = switchEnglishToMorseDict(englishKeyDict)

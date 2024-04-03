@@ -1,6 +1,6 @@
 
 
-# MORSE CODE TRANSLATOR
+# Morse Code Translator
 
 ## Project Overview & Link
 
@@ -8,13 +8,13 @@ In this project, I will create a morse-code translator where the user will be ab
 
 
 ## Table Of Contents
-- GOALS
-- HOW TO USE
-- TECH STACK
-- IMPLEMENTATION
-- CODE FUNCTION & DESIGN DECISIONS
-- ISSUES & BUGS
-- ADDITIONS AND IMPROVEMENTS
+- Goals
+- How to use
+- Tech Stack
+- Implementation
+- Code functionality & Design Decisions
+- Issues & Bugs
+- Additions & Improvements
 
 
 ## Screenshot
