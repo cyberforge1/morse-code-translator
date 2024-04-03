@@ -2,12 +2,12 @@
 
 # MORSE CODE TRANSLATOR
 
-## PROJECT OVERVIEW & LINK
+## Project Overview & Link
 
 In this project, I will create a morse-code translator where the user will be able to input either morse code or English into a dialogue box and have it be translated into the other.
 
 
-## TABLE OF CONTENTS
+## Table Of Contents
 - GOALS
 - HOW TO USE
 - TECH STACK
@@ -17,12 +17,12 @@ In this project, I will create a morse-code translator where the user will be ab
 - ADDITIONS AND IMPROVEMENTS
 
 
-## SCREENSHOT
+## Screenshot
 
 ![Screenshot](images/screenshot.png)
 
 
-## GOALS
+## Goals
 
 - To iterate through JS Object data types by using methods such as Object.keys(), Object.values() and Object.entries
 
@@ -38,7 +38,7 @@ In this project, I will create a morse-code translator where the user will be ab
 
 
 
-## HOW TO USE / IMPORTANT ELEMENTS & FUNCTIONS
+## How To Use / Important Elements & Functions
 
 The user will be able place English text into the left dialogue box and have it translate immediately to morse code in the right hand dialogue box.
 
@@ -48,7 +48,7 @@ The user will be able to place morse code letters into the right dialogue box an
 
 
 
-## TECH STACK
+## Tech Stack
     - HTML
     - CSS
     - JavaScript
@@ -56,15 +56,15 @@ The user will be able to place morse code letters into the right dialogue box an
     - Git 
 
 
-## IMPLEMENTATION
+## Implementation
 
-### MVP (BASIC REQUIREMENTS)
+### MVP (Basic Requirements)
 - basic user interface to input and submit text
 - translation of English text to morse code and vice versa
     
-### UI (DIGITAL RENDERING OF ELEMENTS)
+### UI
 
-### LOGIC (SEQUENCE OF STEPS TO ACHIEVE RESULT)
+### LOGIC 
 
 
 
@@ -82,11 +82,11 @@ The user will be able to place morse code letters into the right dialogue box an
 
 6) Replacement of standard HTML interface with a dynamically generated UI
 
-## CODE
+## Code
 
-## ISSUES / BUGS
+## Issues / Bugs
 
-## POTENTIAL ADDITIONS
+## Potential Additions
 
 Addition of a two way translation via placing morse code in the right dialogue box and having it translated to English on the left hand side
 
