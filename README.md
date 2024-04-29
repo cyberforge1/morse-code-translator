@@ -1,94 +1,60 @@
 
-
 # Morse Code Translator
 
-## Project Overview & Link
+## Project Overview
+This project is a Morse Code Translator web page, designed to convert English to Morse Code and vice versa in a simple, user-friendly interface.
 
-In this project, I will create a morse-code translator where the user will be able to input either morse code or English into a dialogue box and have it be translated into the other.
-
-
-## Table Of Contents
-- Goals
-- How to use
-- Tech Stack
-- Implementation
-- Code functionality & Design Decisions
-- Issues & Bugs
-- Additions & Improvements
-
+## Deployment Link
+*Deployment Link*
 
 ## Screenshot
-
 ![Screenshot](images/screenshot.png)
 
-
-## Goals
-
-- To iterate through JS Object data types by using methods such as Object.keys(), Object.values() and Object.entries
-
-- To use modular code, paired with import and export statements, to separate logic and DOM manipulation functions. 
-
-- To gain more experience with DOM traversal and dynamically generating HTML with Javascript 
-
-- To write Unit Testing for testing of the application logic using JEST
-
-- To provide the user a simple and functional UI 
-
-- To make the translation into morse code instantaneous 
-
-
-
-## How To Use / Important Elements & Functions
-
-The user will be able place English text into the left dialogue box and have it translate immediately to morse code in the right hand dialogue box.
-
-By selecting the button in between the two dialogue boxes will toggle between English -> Morse Code and Morse Code -> English
-
-The user will be able to place morse code letters into the right dialogue box and have it translate immediately to English in the left hand dialogue box.
-
-
+## Table of Contents
+- [Tech Stack](#tech-stack)
+- [Goals](#goals)
+- [How to Use](#how-to-use)
+- [Implementation](#implementation)
+- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
+- [Issues & Bugs](#issues--bugs)
+- [Additions & Improvements](#additions--improvements)
+- [Learning Highlights](#learning-highlights)
 
 ## Tech Stack
-    - HTML
-    - CSS
-    - JavaScript
-    - JEST
-    - Git 
+- HTML
+- CSS/SCSS
+- JavaScript
+- Git
+- Jest Testing
 
+## Goals
+Create a minimalist yet fully functional Morse Code translator as an MVP, with scope for adding more interactive features once the basics are solidly in place.
+
+## How to Use
+Simply enter English text or Morse Code into the input field and press the translate button to see the conversion in real time.
 
 ## Implementation
+- **MVP**: Basic translation functionality between English and Morse Code.
+- **User Interface**: Clean, distraction-free interface focusing on usability.
+- **Logic Strategy**: Efficient translation algorithms with proper handling of spaces and special characters.
 
-### MVP (Basic Requirements)
-- basic user interface to input and submit text
-- translation of English text to morse code and vice versa
-    
-### UI
+## Code / Important Elements / Design Decisions
+Focused on readability and maintainability of the code. Chose specific JavaScript functions for their performance benefits.
 
-### LOGIC 
+## Issues & Bugs
+- Current bug in handling backspace which affects continuous text editing.
 
+## Additions & Improvements
+- **Refactoring**: Simplify the translation logic for maintainability.
+- **UI Enhancements**: Implement colorful placeholder texts that change when the translation direction switches.
+- **Additional Features**: Add a Morse Code chart for user reference and improve mobile responsiveness.
+- **Readability Improvements**: Enhance Morse to English translation visibility and user feedback.
 
+## Learning Highlights
+Gained valuable experience in JavaScript application development, UI design principles, and automated testing with Jest.
 
-## Build Plan
-
-1) Creation of the basic English to Morse Code logic functions
-
-2) Creation of a simple HTML & CSS interface
-
-3) Adding function to this interface with a DOM manipulation
-
-4) Separation into modules and Dom-utils scripts
-
-5) Creation of the Morse code to English logic function and optimization of matching
-
-6) Replacement of standard HTML interface with a dynamically generated UI
-
-## Code
-
-## Issues / Bugs
-
-## Potential Additions
-
-Addition of a two way translation via placing morse code in the right dialogue box and having it translated to English on the left hand side
-
-Addition of input numbers into the morse code translator object.
+## Contact Me
+- For more details, visit my [LinkedIn](https://www.linkedin.com/in/obj809/).
+- Check out more of my projects on [GitHub](https://github.com/cyberforge1).
+- Feel free to send me an email at obj809@gmail.com.
 
