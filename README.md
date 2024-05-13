@@ -5,7 +5,7 @@
 This project is a Morse Code Translator web page, designed to convert English to Morse Code and vice versa in a simple, user-friendly interface.
 
 ## Deployment Link
-*Deployment Link*
+This translator app is live! Check it out [here](https://morse-code-translator-project.netlify.app/).
 
 ## Screenshot
 ![Screenshot](images/project-screenshot.png)
