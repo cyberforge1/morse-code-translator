@@ -8,7 +8,7 @@ This project is a Morse Code Translator web page, designed to convert English to
 *Deployment Link*
 
 ## Screenshot
-![Screenshot](images/screenshot.png)
+![Screenshot](images/project-screenshot.png)
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
